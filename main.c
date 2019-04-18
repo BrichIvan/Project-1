@@ -100,8 +100,6 @@ void TIM7Config(void);
 void TIM7Config (void){
 	TIM7->PSC = 8000 - 1;  // frequency set
 	TIM7->ARR = 5000 - 1;  // auto-reload set
-	//TIM7->CCR1 = 1000;  // Pulse length
-	//TIM7->RCR = 1-1;  // Amount of pulses
 	NVIC_EnableIRQ(TIM7_IRQn);
 	TIM7->CR1 |= TIM_CR1_URS;  //
 	TIM7->EGR |= TIM_EGR_UG;  //
